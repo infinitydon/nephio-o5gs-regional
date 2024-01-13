@@ -1,0 +1,1 @@
+# nephio-o5gs-regional
