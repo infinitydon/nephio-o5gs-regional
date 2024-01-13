@@ -1,0 +1,22 @@
+apiVersion: kpt.dev/v1
+kind: Kptfile
+metadata: # kpt-merge: /flux-helm-controllers
+  name: flux-helm-controllers
+  annotations:
+    config.kubernetes.io/local-config: "true"
+    internal.kpt.dev/upstream-identifier: 'kpt.dev|Kptfile|default|flux-helm-controllers'
+upstream:
+  type: git
+  git:
+    repo: https://github.com/nephio-project/nephio-example-packages.git
+    directory: flux-helm-controllers
+    ref: flux-helm-controllers/v1
+upstreamLock:
+  type: git
+  git:
+    repo: https://github.com/nephio-project/nephio-example-packages.git
+    directory: flux-helm-controllers
+    ref: flux-helm-controllers/v1
+    commit: eaba5a715d7cb8e38d52968dbf3f06362d31fdb4
+info:
+  description: flux package to deploy flux helm-controller and source-controller
