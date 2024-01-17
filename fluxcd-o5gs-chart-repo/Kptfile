@@ -1,0 +1,22 @@
+apiVersion: kpt.dev/v1
+kind: Kptfile
+metadata: # kpt-merge: /fluxcd-o5gs-chart-repo
+  name: fluxcd-o5gs-chart-repo
+  annotations:
+    config.kubernetes.io/local-config: "true"
+    internal.kpt.dev/upstream-identifier: 'kpt.dev|Kptfile|default|fluxcd-o5gs-chart-repo'
+upstream:
+  type: git
+  git:
+    repo: https://github.com/infinitydon/nephio-example-packages.git
+    directory: fluxcd-o5gs-chart-repo
+    ref: fluxcd-o5gs-chart-repo/v1
+upstreamLock:
+  type: git
+  git:
+    repo: https://github.com/infinitydon/nephio-example-packages.git
+    directory: fluxcd-o5gs-chart-repo
+    ref: fluxcd-o5gs-chart-repo/v1
+    commit: 58ea0eb9aa2f3ee6107baf31a156877c43d2a051
+info:
+  description: multus description

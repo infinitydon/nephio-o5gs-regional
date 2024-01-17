@@ -1,0 +1,11 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata: # kpt-merge: flux-system/o5gs
+  name: o5gs
+  namespace: flux-system
+  annotations:
+    internal.kpt.dev/upstream-identifier: 'source.toolkit.fluxcd.io|HelmRepository|flux-system|o5gs'
+spec:
+  interval: 10m
+  type: oci
+  url: oci://ghcr.io/infinitydon
